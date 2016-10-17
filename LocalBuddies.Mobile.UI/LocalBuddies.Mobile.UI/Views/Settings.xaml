@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="LocalBuddies.Mobile.UI.Views.Settings">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+      <Label Text="Name"  VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand"></Label>
+      <Entry Placeholder="Enter Name" Text="{Binding Name}" HorizontalOptions="StartAndExpand" WidthRequest="200" x:Name="userName"></Entry>
+      <Button Text=" Save " Command="{Binding SaveCommand}" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

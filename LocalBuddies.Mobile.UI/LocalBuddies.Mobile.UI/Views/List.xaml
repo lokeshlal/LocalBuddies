@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="LocalBuddies.Mobile.UI.Views.List">
+  <ContentPage.Content>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+      <Label Text="{Binding UserDetails}" />
+      <Label Text="Available Users" FontSize="18" />
+      <ListView ItemsSource="{Binding AvailableDevices, Mode=TwoWay}" RowHeight="40" x:Name="devices" SelectedItem="{Binding SelectedUser, Mode=TwoWay}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Label Text="{Binding DisplayName}"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand" />
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>
