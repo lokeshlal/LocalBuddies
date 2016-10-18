@@ -13,16 +13,9 @@ namespace LocalBuddies.Mobile.UI.iOS
 {
     public class AudioHandler : IAudioHandler
     {
-        AVAudioRecorder recorder;
-        NSError error;
-        NSUrl url;
-        NSDictionary settings;
         InputAudioQueue audioQueue;
         //OutputAudioQueue outputQueue;
         private int bufferLength = 1000;
-        private AVAudioPlayer backgroundMusic;
-
-        AudioFileStream fileStream;
 
         public bool IsRecording { get; set; }
 
